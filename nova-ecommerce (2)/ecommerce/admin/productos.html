@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos · Admin NOVA</title>
+  <meta name="description" content="Panel de administración de NOVA: administrá el catálogo, precios y stock.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f6f6f4">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin" data-admin="productos">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="admin-shell">
+    <aside class="sidebar" id="admin-sidebar" aria-label="Menú del panel"></aside>
+    <div class="admin-main">
+      <header class="topbar" id="admin-topbar"></header>
+      <main id="main" class="admin-content">
+        <div class="admin-head">
+          <div>
+            <h1>Productos</h1>
+            <p>Administrá el catálogo, precios y stock.</p>
+          </div>
+          <div class="admin-head__actions" id="head-actions"></div>
+        </div>
+        <div id="page" aria-live="polite"></div>
+      </main>
+    </div>
+  </div>
+
+  <script>window.NOVA_BASE = "../";</script>
+  <script src="../js/data/products.js" defer></script>
+  <script src="../js/data/store-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script src="../js/supabase-config.js" defer></script>
+  <script src="../js/db.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+  <script src="../js/import-excel.js" defer></script>
+  <script src="../js/admin-pages.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nueva contraseña · NOVA</title>
+  <meta name="description" content="Creá una nueva contraseña para tu cuenta NOVA.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="container" style="max-width:480px;padding-top:64px;padding-bottom:96px">
+    <h1 style="font-size:32px">Creá una nueva contraseña</h1>
+    <p style="color:var(--muted);margin:8px 0 28px">Elegí una contraseña de al menos 8 caracteres.</p>
+
+    <div id="np-status" class="alert alert--info" style="margin-bottom:20px">Verificando el enlace…</div>
+
+    <form id="np-form" novalidate hidden style="display:grid;gap:16px">
+      <div class="field">
+        <label for="np-pass">Nueva contraseña</label>
+        <input class="input" id="np-pass" type="password" autocomplete="new-password" minlength="8" required>
+        <span class="field__error">Mínimo 8 caracteres.</span>
+      </div>
+      <div class="field">
+        <label for="np-pass2">Repetí la contraseña</label>
+        <input class="input" id="np-pass2" type="password" autocomplete="new-password" required>
+        <span class="field__error">Las contraseñas no coinciden.</span>
+      </div>
+      <button type="submit" class="btn btn--dark btn--lg btn--block">Guardar contraseña</button>
+    </form>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/supabase-config.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/new-password.js" defer></script>
+</body>
+</html>

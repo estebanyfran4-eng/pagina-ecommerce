@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos · NOVA</title>
+  <meta name="description" content="Explorá el catálogo completo de NOVA: filtrá por categoría, precio, marca, descuento y valoración.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="productos">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="container">
+      <header class="page-head">
+        <nav class="breadcrumb" aria-label="Migas de pan" id="breadcrumb">
+          <a href="index.html">Inicio</a>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          <span aria-current="page">Productos</span>
+        </nav>
+        <h1 id="catalog-title">Todos los productos</h1>
+        <p id="catalog-desc">Tecnología, indumentaria, calzado, accesorios y hogar. Todo en un solo lugar.</p>
+      </header>
+
+      <div class="catalog">
+        <!-- FILTROS -->
+        <aside class="filters" id="filters" aria-labelledby="filters-title">
+          <div class="filters__head">
+            <h2 id="filters-title">Filtros</h2>
+            <button type="button" class="btn btn--ghost btn--sm" id="clear-filters">Limpiar</button>
+          </div>
+
+          <details class="filter-group" open>
+            <summary>Categoría</summary>
+            <div class="filter-group__body" id="f-categories"></div>
+          </details>
+
+          <details class="filter-group" open>
+            <summary>Precio</summary>
+            <div class="filter-group__body">
+              <div class="price-range">
+                <div class="field"><label for="f-min" class="sr-only">Precio mínimo</label><input class="input" id="f-min" type="number" inputmode="numeric" min="0" step="1000" placeholder="Mín."></div>
+                <div class="field"><label for="f-max" class="sr-only">Precio máximo</label><input class="input" id="f-max" type="number" inputmode="numeric" min="0" step="1000" placeholder="Máx."></div>
+              </div>
+              <div class="rating-opts" id="f-price-presets"></div>
+            </div>
+          </details>
+
+          <details class="filter-group" open>
+            <summary>Marca</summary>
+            <div class="filter-group__body" id="f-brands"></div>
+          </details>
+
+          <details class="filter-group" open>
+            <summary>Disponibilidad</summary>
+            <div class="filter-group__body">
+              <label class="check"><input type="checkbox" id="f-stock"> Solo con stock</label>
+            </div>
+          </details>
+
+          <details class="filter-group" open>
+            <summary>Descuento</summary>
+            <div class="filter-group__body">
+              <label class="check"><input type="radio" name="f-discount" value="0" checked> Todos</label>
+              <label class="check"><input type="radio" name="f-discount" value="1"> Con descuento</label>
+              <label class="check"><input type="radio" name="f-discount" value="15"> 15% OFF o más</label>
+              <label class="check"><input type="radio" name="f-discount" value="20"> 20% OFF o más</label>
+            </div>
+          </details>
+
+          <details class="filter-group" open>
+            <summary>Valoración</summary>
+            <div class="filter-group__body">
+              <label class="check"><input type="radio" name="f-rating" value="0" checked> Todas</label>
+              <label class="check"><input type="radio" name="f-rating" value="4.5"> <span class="stars" aria-hidden="true"><span class="stars__track">★★★★★</span><span class="stars__fill" style="width:90%">★★★★★</span></span> 4,5 o más</label>
+              <label class="check"><input type="radio" name="f-rating" value="4"> <span class="stars" aria-hidden="true"><span class="stars__track">★★★★★</span><span class="stars__fill" style="width:80%">★★★★★</span></span> 4 o más</label>
+            </div>
+          </details>
+        </aside>
+        <div class="filters__apply" id="filters-apply">
+          <button type="button" class="btn btn--outline" id="filters-reset-m">Limpiar</button>
+          <button type="button" class="btn btn--dark btn--block" id="filters-close">Ver resultados</button>
+        </div>
+
+        <!-- RESULTADOS -->
+        <section aria-labelledby="catalog-title">
+          <div class="catalog-search">
+            <label for="catalog-q" class="sr-only">Buscar en el catálogo</label>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input class="input" id="catalog-q" type="search" placeholder="Buscar por nombre, marca o categoría…">
+          </div>
+          <div class="toolbar">
+            <p class="toolbar__count" id="result-count" aria-live="polite"></p>
+            <div class="toolbar__right">
+              <button type="button" class="btn btn--outline btn--sm filter-toggle" id="filter-toggle" aria-controls="filters" aria-expanded="false">
+                <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg> Filtros
+              </button>
+              <label for="sort" class="sr-only">Ordenar por</label>
+              <select class="select" id="sort">
+                <option value="relevancia">Relevancia</option>
+                <option value="nuevos">Más nuevos</option>
+                <option value="precio-asc">Precio: menor a mayor</option>
+                <option value="precio-desc">Precio: mayor a menor</option>
+                <option value="vendidos">Más vendidos</option>
+              </select>
+            </div>
+          </div>
+          <div class="chips" id="chips"></div>
+          <div class="product-grid product-grid--3" id="catalog-grid"></div>
+          <div style="text-align:center;margin-top:40px">
+            <button type="button" class="btn btn--outline btn--lg" id="load-more" hidden>Cargar más productos</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/products.js" defer></script>
+</body>
+</html>

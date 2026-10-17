@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto · NOVA</title>
+  <meta name="description" content="Detalle de producto en NOVA: fotos, precio, cuotas, especificaciones y reseñas.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="producto">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb page-head" style="padding-bottom:0;margin-bottom:24px" aria-label="Migas de pan" id="breadcrumb"></nav>
+      <div id="pdp-root">
+        <div class="pdp" aria-busy="true">
+          <div class="skeleton" style="aspect-ratio:4/5"></div>
+          <div><div class="skeleton" style="height:40px;width:70%"></div><div class="skeleton" style="height:20px;width:40%;margin-top:16px"></div><div class="skeleton" style="height:180px;margin-top:24px"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section section--surface" aria-labelledby="related-title" id="related-section" hidden>
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Te puede interesar</span><h2 id="related-title">Productos relacionados</h2></div>
+          <a href="productos.html" class="link-arrow" id="related-link">Ver más <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="product-grid" id="related-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-buy" id="sticky-buy" aria-hidden="true"></div>
+  <footer id="site-footer"></footer>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/product.js" defer></script>
+</body>
+</html>

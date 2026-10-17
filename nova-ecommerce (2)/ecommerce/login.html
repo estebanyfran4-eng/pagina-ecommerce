@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión · NOVA</title>
+  <meta name="description" content="Ingresá a tu cuenta NOVA o creá una nueva para seguir tus pedidos y guardar favoritos.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="auth">
+    <section class="auth__visual" aria-hidden="true">
+      <div class="auth__visual-art" id="auth-art"></div>
+      <h2>Tu cuenta, tus pedidos, tus favoritos.</h2>
+      <p>Comprá más rápido, seguí tus envíos en tiempo real y recibí beneficios exclusivos.</p>
+      <ul class="auth__perks">
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> Checkout en un click</li>
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> Seguimiento de pedidos</li>
+        <li><svg class="icon" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> 15% OFF de bienvenida con BIENVENIDA</li>
+      </ul>
+    </section>
+
+    <section class="auth__panel">
+      <div class="auth__box">
+        <div class="auth__switch" role="tablist" aria-label="Acceso">
+          <button type="button" role="tab" id="tab-login" aria-controls="panel-login" aria-selected="true">Iniciar sesión</button>
+          <button type="button" role="tab" id="tab-register" aria-controls="panel-register" aria-selected="false">Crear cuenta</button>
+        </div>
+
+        <!-- LOGIN -->
+        <div id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+          <h1>Hola de nuevo</h1>
+          <p>Ingresá con tu email y contraseña.</p>
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="login-email">Email</label>
+              <input class="input" id="login-email" type="email" autocomplete="email" placeholder="tu@email.com" required>
+              <span class="field__error">Ingresá un email válido.</span>
+            </div>
+            <div class="field">
+              <label for="login-pass">Contraseña</label>
+              <div class="pass-wrap">
+                <input class="input" id="login-pass" type="password" autocomplete="current-password" placeholder="••••••••" required minlength="6">
+                <button type="button" class="pass-toggle" data-toggle-pass="login-pass" aria-label="Mostrar contraseña">Mostrar</button>
+              </div>
+              <span class="field__error">La contraseña debe tener al menos 6 caracteres.</span>
+            </div>
+            <div class="auth__row">
+              <label class="check" style="font-size:14px"><input type="checkbox" checked> Recordarme</label>
+              <a href="#" class="link" id="forgot-link">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn btn--dark btn--lg btn--block">Iniciar sesión</button>
+            <div class="divider">o continuá con</div>
+            <div class="social-login">
+              <button type="button" class="btn btn--outline" data-social="Google">Google</button>
+              <button type="button" class="btn btn--outline" data-social="Apple">Apple</button>
+            </div>
+          </form>
+          <p class="demo-hint">¿No tenés cuenta? <a href="#" class="link" data-go="register">Crear cuenta</a></p>
+          <p class="demo-hint" id="demo-hint" style="margin-top:6px">Modo demo: <button type="button" class="link" id="demo-login" style="background:none;border:0;padding:0">entrar como Juan Pérez</button></p>
+        </div>
+
+        <!-- REGISTRO -->
+        <div id="panel-register" role="tabpanel" aria-labelledby="tab-register" hidden>
+          <h1>Creá tu cuenta</h1>
+          <p>Es gratis y te lleva menos de un minuto.</p>
+          <form id="register-form" novalidate>
+            <div class="form-grid">
+              <div class="field"><label for="reg-name">Nombre</label><input class="input" id="reg-name" autocomplete="given-name" required placeholder="Juan"><span class="field__error">Ingresá tu nombre.</span></div>
+              <div class="field"><label for="reg-last">Apellido</label><input class="input" id="reg-last" autocomplete="family-name" required placeholder="Pérez"><span class="field__error">Ingresá tu apellido.</span></div>
+            </div>
+            <div class="field"><label for="reg-email">Email</label><input class="input" id="reg-email" type="email" autocomplete="email" required placeholder="tu@email.com"><span class="field__error">Ingresá un email válido.</span></div>
+            <div class="field">
+              <label for="reg-pass">Contraseña</label>
+              <div class="pass-wrap">
+                <input class="input" id="reg-pass" type="password" autocomplete="new-password" required minlength="8" placeholder="Mínimo 8 caracteres">
+                <button type="button" class="pass-toggle" data-toggle-pass="reg-pass" aria-label="Mostrar contraseña">Mostrar</button>
+              </div>
+              <span class="field__hint" id="pass-strength">Usá al menos 8 caracteres, con números y letras.</span>
+              <span class="field__error">La contraseña debe tener al menos 8 caracteres.</span>
+            </div>
+            <label class="check" style="font-size:14px"><input type="checkbox" id="reg-terms"> Acepto los <a href="info.html#terminos" class="link">términos</a> y la <a href="info.html#privacidad" class="link">política de privacidad</a></label>
+            <label class="check" style="font-size:14px"><input type="checkbox" id="reg-news" checked> Quiero recibir ofertas por email</label>
+            <button type="submit" class="btn btn--dark btn--lg btn--block">Crear cuenta</button>
+          </form>
+          <p class="demo-hint">¿Ya tenés cuenta? <a href="#" class="link" data-go="login">Iniciar sesión</a></p>
+        </div>
+
+        <!-- CONFIRMAR EMAIL (después de registrarse, si Supabase lo pide) -->
+        <div id="panel-check" hidden>
+          <h1>Revisá tu email</h1>
+          <p>Te enviamos un enlace de confirmación a <strong id="check-email"></strong>. Abrilo para activar tu cuenta y después iniciá sesión.</p>
+          <div class="alert alert--info" style="margin-bottom:16px">Si no lo ves en unos minutos, revisá la carpeta de spam o promociones.</div>
+          <button type="button" class="btn btn--dark btn--lg btn--block" data-go="login">Ir a iniciar sesión</button>
+        </div>
+
+        <!-- RECUPERAR -->
+        <div id="panel-forgot" hidden>
+          <h1>Recuperá tu contraseña</h1>
+          <p>Te enviaremos un enlace para crear una nueva contraseña.</p>
+          <form id="forgot-form" novalidate>
+            <div class="field"><label for="forgot-email">Email</label><input class="input" id="forgot-email" type="email" autocomplete="email" required placeholder="tu@email.com"><span class="field__error">Ingresá un email válido.</span></div>
+            <button type="submit" class="btn btn--dark btn--lg btn--block">Enviar enlace</button>
+          </form>
+          <div id="forgot-ok" hidden class="alert alert--success" style="margin-top:16px"></div>
+          <p class="demo-hint"><a href="#" class="link" data-go="login">← Volver a iniciar sesión</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/supabase-config.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

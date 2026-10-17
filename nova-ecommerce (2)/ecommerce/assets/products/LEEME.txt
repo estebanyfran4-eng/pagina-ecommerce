@@ -1,0 +1,2 @@
+Colocá acá las fotos reales de productos (JPG/WebP, idealmente 800x1000 px).
+Luego referencialas en js/data/products.js con: images: ["assets/products/archivo.jpg"]

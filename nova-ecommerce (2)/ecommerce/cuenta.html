@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi cuenta · NOVA</title>
+  <meta name="description" content="Tu cuenta NOVA: pedidos, favoritos, direcciones y datos personales.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cuenta">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="container">
+      <header class="page-head">
+        <nav class="breadcrumb" aria-label="Migas de pan">
+          <a href="index.html">Inicio</a>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          <span aria-current="page">Mi cuenta</span>
+        </nav>
+        <h1 id="hello">Hola</h1>
+        <p id="hello-sub">Gestioná tus pedidos, favoritos y datos personales.</p>
+      </header>
+
+      <div class="account">
+        <nav class="account-nav" aria-label="Secciones de la cuenta" role="tablist" id="account-nav"></nav>
+        <div class="account-panel" id="account-panel" role="tabpanel" tabindex="-1"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/supabase-config.js" defer></script>
+  <script src="js/db.js" defer></script>
+  <script src="js/account.js" defer></script>
+</body>
+</html>

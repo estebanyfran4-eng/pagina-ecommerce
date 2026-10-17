@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout · NOVA</title>
+  <meta name="description" content="Finalizá tu compra en NOVA de forma rápida y segura.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="checkout-header">
+    <div class="container checkout-header__inner">
+      <a href="index.html" class="logo" aria-label="NOVA — Inicio">NOVA<span class="logo__dot" aria-hidden="true"></span></a>
+      <span class="checkout-header__secure"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Compra segura</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container" id="checkout-root"></div>
+  </main>
+
+  <footer class="container" style="padding:24px var(--gutter) 40px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <span>© NOVA · Demo frontend: no se realizan cobros reales.</span>
+    <span><a href="info.html#terminos" class="link">Términos</a> · <a href="info.html#privacidad" class="link">Privacidad</a> · <a href="info.html#contacto" class="link">Ayuda</a></span>
+  </footer>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito · NOVA</title>
+  <meta name="description" content="Revisá los productos de tu carrito, aplicá cupones y finalizá tu compra en NOVA.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="carrito">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="container">
+      <header class="page-head">
+        <nav class="breadcrumb" aria-label="Migas de pan">
+          <a href="index.html">Inicio</a>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          <span aria-current="page">Carrito</span>
+        </nav>
+        <h1>Tu carrito <span id="cart-heading-count" style="color:var(--muted);font-weight:500"></span></h1>
+      </header>
+      <div id="cart-root"></div>
+    </div>
+
+    <section class="section section--surface" aria-labelledby="upsell-title" id="upsell" hidden>
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Completá tu compra</span><h2 id="upsell-title">También te puede gustar</h2></div></div>
+        <div class="product-grid" id="upsell-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</body>
+</html>

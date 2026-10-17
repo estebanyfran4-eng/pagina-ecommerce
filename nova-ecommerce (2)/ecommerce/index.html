@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOVA · Todo lo que buscás, en un solo lugar</title>
+  <meta name="description" content="NOVA: tecnología, indumentaria, calzado, accesorios y hogar. Envío gratis desde $150.000 y 6 cuotas sin interés.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__card">
+          <div class="hero__content">
+            <span class="hero__tag"><b>Nuevo</b> Colección primavera 2026</span>
+            <h1 id="hero-title">Todo lo que buscás. <span>En un solo lugar.</span></h1>
+            <p class="hero__sub">Descubrí productos seleccionados y comprá de forma rápida y segura.</p>
+            <div class="hero__ctas">
+              <a href="productos.html" class="btn btn--accent btn--lg">Ver productos</a>
+              <a href="productos.html?ofertas=1" class="btn btn--outline btn--lg">Ver ofertas</a>
+            </div>
+            <div class="hero__stats">
+              <div><strong>+12.000</strong><span>clientes felices</span></div>
+              <div><strong>4,8 ★</strong><span>valoración promedio</span></div>
+              <div><strong>24 h</strong><span>despacho en AMBA</span></div>
+            </div>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__glow"></div>
+            <div class="hero__ring"></div>
+            <div class="hero__ring hero__ring--2"></div>
+            <div class="hero__product hero__product--b" data-hero="smartwatch-active"></div>
+            <div class="hero__product hero__product--a" data-hero="auriculares-nova-pro"></div>
+            <div class="hero__product hero__product--c" data-hero="zapatillas-urban-x"></div>
+            <div class="hero__float">
+              <span class="hero__float-thumb" data-hero-thumb="mochila-daily"></span>
+              <div><strong>Mochila Daily</strong><span>Se vendieron 1.750 este mes</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="brands" aria-label="Marcas disponibles">
+      <div class="container brands__row">
+        <span>NOVA</span><span>VOLTRA</span><span>KAIRO</span><span>URBANA</span><span>LUMEN</span><span>TERRA</span>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="section" id="categorias" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Categorías</span>
+            <h2 id="cat-title">Explorá por categoría</h2>
+          </div>
+          <a href="productos.html" class="link-arrow">Ver todo el catálogo <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="cat-grid" id="cat-grid"></div>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="section section--surface" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Selección NOVA</span>
+            <h2 id="featured-title">Productos destacados</h2>
+            <p>Lo más elegido por nuestra comunidad, con envío rápido a todo el país.</p>
+          </div>
+          <div class="pill-tabs" role="tablist" aria-label="Filtrar destacados">
+            <button class="pill-tab" role="tab" aria-selected="true" data-tab="featured">Destacados</button>
+            <button class="pill-tab" role="tab" aria-selected="false" data-tab="sale">Ofertas</button>
+            <button class="pill-tab" role="tab" aria-selected="false" data-tab="best">Más vendidos</button>
+            <button class="pill-tab" role="tab" aria-selected="false" data-tab="new">Nuevos</button>
+          </div>
+        </div>
+        <div class="product-grid" id="featured-grid" aria-live="polite"></div>
+        <div style="text-align:center;margin-top:48px">
+          <a href="productos.html" class="btn btn--dark btn--lg">Ver todos los productos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMOS -->
+    <section class="section" aria-label="Promociones">
+      <div class="container promo-grid">
+        <article class="promo promo--dark reveal">
+          <div class="promo__art" data-promo-art="1" aria-hidden="true"></div>
+          <span class="eyebrow">Hasta 30% OFF</span>
+          <h3>Tecnología para tu día a día</h3>
+          <p>Auriculares, smartwatches y accesorios con precios especiales por tiempo limitado.</p>
+          <a href="productos.html?cat=tecnologia" class="btn btn--light">Comprar tecnología</a>
+        </article>
+        <article class="promo promo--light reveal">
+          <div class="promo__art" data-promo-art="2" aria-hidden="true"></div>
+          <span class="eyebrow">Primera compra</span>
+          <h3>10% OFF en tu primera compra</h3>
+          <p>Usá el cupón en el carrito. <span class="promo__code">NOVA10</span></p>
+          <a href="productos.html" class="btn btn--dark">Empezar a comprar</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- RECIÉN LLEGADOS -->
+    <section class="section section--tight" aria-labelledby="new-title" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Recién llegados</span>
+            <h2 id="new-title">Lo último en NOVA</h2>
+          </div>
+          <a href="productos.html?orden=nuevos" class="link-arrow">Ver novedades <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="product-grid" id="new-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data/products.js" defer></script>
+  <script src="js/data/store-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+</html>
